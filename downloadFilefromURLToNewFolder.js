@@ -22,3 +22,9 @@ let download = function (url, dest, cb) {
       if (cb) cb(err.message);
     });
 };
+
+const eachModelDest = `../../src/assets/new-folder-name`;
+// create that new folder
+fs.mkdirSync(eachModelDest);
+// pass that new folder path along with the file name and extension
+download("https://can-create-new-folder", `${eachModelDest}/img.png`, () => {});
